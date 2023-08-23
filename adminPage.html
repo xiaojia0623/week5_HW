@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- google fonts css link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif:wght@400;900&family=Roboto+Mono:wght@400;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+<!-- google icons css link -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+        <title>Admin頁面</title>
+  <script type="module" crossorigin src="/week5_hw/assets/bootstrap.min-f173e2be.js"></script>
+  <link rel="stylesheet" href="/week5_hw/assets/bootstrap-602ee28a.css">
+</head>
+<body class="vsc-initialized">
+    <div class="d-flex">
+        <!-- 左邊區塊 -->
+        <nav class="sidebar  pt-3 vh-100 border-end d-flex flex-column">
+            <!-- 1. 後台logo-->
+            <a href="#" class="logoIcon">
+                <img src="/week5_hw/assets/logo-ANSWER-a11e3fef.svg" alt="logo">
+            </a>
+            <!-- 2. 後台選單內容-->
+            <div class="overflow-auto mt-3">
+                <div class="px-2">
+                    <a href="#" class="sidebar-link">
+                        <div class="px-4 align-center d-flex">
+                            <span class="material-symbols-outlined me-3">insert_chart</span>
+                            <p class="mb-0">Dashboard</p>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <div class="px-4 align-center d-flex">
+                            <span class="material-symbols-outlined me-3">forum</span>
+                            <p>Question</p>
+                        </div>
+                    </a>
+                    <a href="index.html" class="sidebar-link">
+                        <div class="px-4 align-center d-flex">
+                            <span class="material-symbols-outlined me-3">assignment</span>
+                            <p>Assignment</p>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <div class="px-4 align-center d-flex">
+                            <span class="material-symbols-outlined me-3">video_library</span>
+                            <p>Course</p>
+                        </div>
+                    </a>
+                    <a href="adminPage.html" class="sidebar-link active">
+                        <div class="px-4 align-center d-flex">
+                            <span class="material-symbols-outlined me-3">group</span>
+                            <p>Admin</p>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <div class="px-4 align-center d-flex">
+                            <span class="material-symbols-outlined me-3">settings</span>
+                            <p>Settings</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- 3. 帳號管理-->
+            <div class="userInfo d-flex sidebar-link">
+                <img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80" alt="user-pic">
+                <div class="userName">
+                    <p>Andy Chen</p>
+                    <a href="mailto:andy0401@mail.com">andy0401@mail.com</a>
+                </div>
+            </div>
+        </nav>
+        <!-- 右邊區塊 -->
+        <main class="main">
+            <!-- 上排區塊 -->
+            <div class="bg-white w-100">
+                <div class="admin-title d-flex justify-content-between align-center">
+                    <div class="adminTitle d-flex align-center">
+                        <h1>Admin</h1>
+                        <h2>
+                            <a href="#"  data-bs-toggle="modal" data-bs-target="#addModal"><span class="material-symbols-outlined me-3 add">add</span>Add New Admin</a>
+                        </h2>
+                    </div>
+                    <div class="topIcon align-center">
+                        <span class="material-symbols-outlined me-3">search</span>
+                        <span class="material-symbols-outlined">notifications_active</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- main內容區塊 -->
+
+            <!-- 用table呈現的學生名單 -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="d-flex">
+                            <p>ID</p>
+                            <span class="material-symbols-outlined me-3">arrow_downward</span>
+                        </th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Verified</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th>#1</th>
+                        <td>Emir Wicks</td>
+                        <td>emir.wicks@mail.com</td>
+                        <td>Yes</td>
+                        <!-- 有使用modal互動式窗 -->
+                        <td class="editBtn text-end">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#2</th>
+                        <td>Zaina Goldsmith</td>
+                        <td>zaina.goldsmith@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#3</th>
+                        <td>Mahima Lopez</td>
+                        <td>mahima.lopez@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#4</th>
+                        <td>Pharrell Murray</td>
+                        <td>pharrell.murray@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#5</th>
+                        <td>Annika Mcbride</td>
+                        <td>annika.mcbride@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#6</th>
+                        <td>Fatimah Clark</td>
+                        <td>fatimah.clark@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#7</th>
+                        <td>Klaudia Rhodes</td>
+                        <td>klaudia.rhodes@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#8</th>
+                        <td>Tillie Lucero</td>
+                        <td>tillie.lucero@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#9</th>
+                        <td>Sabrina Stephenson</td>
+                        <td>sabrina.stephenson@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#10</th>
+                        <td>Annie Smith</td>
+                        <td>annie.smith@mail.com</td>
+                        <td>Yes</td>
+                        <td class="editBtn text-end">
+                            <a href="#"><span class="material-symbols-outlined me-3">visibility</span></a>
+                            <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <nav>
+                <!-- 頁碼區塊 -->
+                <ul class="pagination justify-content-end list-unstyled ">
+                    <li class="page-item rounded-start">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span class="material-symbols-outlined">navigate_before</span>
+                        </a>
+                    </li>
+                    <li class="page-item "><a class="page-link bgc tc active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item rounded-end">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span class="material-symbols-outlined">navigate_next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <!-- Modal內容區 -->
+            <!-- Add New Admin 的 modal區塊 -->
+            <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="newEditModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- modal title -->
+                            <h1 class="modal-title fs-5" id="newEditModalLabel">New Admin</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Account zone -->
+                            <h2>Account</h2>
+                            <!-- Account 表單區 -->
+                            <form>
+                                <div class="mb-3">
+                                  <label for="recipient-name" class="col-form-label">Name</label>
+                                  <input type="text" class="form-control rounded-0 border-black" id="recipient-name">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="message-email" class="col-form-label">Email</label>
+                                  <input type="email" class="form-control rounded-0 border-black" id="message-email">
+                                </div>
+                            </form>
+                            <hr>
+                            <!-- Verification zone -->
+                            <h2>Verification</h2>
+                            <div class="verif d-flex align-center">
+                                <div class="verifIcon d-flex align-center">
+                                    <span class="material-symbols-outlined me-3 text-danger">warning</span>
+                                    <p class="fw-bold">Unverified</p>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary rounded-0 w-100 mt-1 text-success bg-light">Send Verification Mail</button>
+                            <hr>
+                            <!-- Access zone -->
+                            <h2>Access Level</h2>
+                            <!-- 選擇功能表區 -->
+                            <select class="form-select rounded-0 border-black" aria-label="Default select example">
+                                <option selected class="ms-3 text-secondary">-Choose access level-</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <hr>
+                            <!-- Custom Access zone -->
+                            <h2>Custom Access</h2>
+                            <!-- 核取方塊 -->
+                            <ul class="customCheck list-unstyled">
+                                <li class="checkItem" style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="LectureCheck">
+                                    <label class="form-check-label"  for="LectureCheck">Lecture</label>
+                                </li>
+                                <li class="checkItem"  style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="CouponCheck">
+                                    <label class="form-check-label"  for="CouponCheck">Coupon</label>
+                                </li>
+                                <li class="checkItem" style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="MessageCheck">
+                                    <label class="form-check-label"  for="MessageCheck">Message</label>
+                                </li>
+                                <li class="checkItem" style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="SettingCheck">
+                                    <label class="form-check-label"  for="SettingCheck">Setting</label>
+                                </li>
+                                <li class="checkItem" style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="TaskCheck">
+                                    <label class="form-check-label"  for="TaskCheck">Task Menu</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- modal buttons -->
+                            <button type="button" class="btn btn-outline-success rounded-0 me-3" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success rounded-0">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit 的 modal區塊 -->
+            <div class="modal fade" id="exampleModal" tabindex="-1"  aria-labelledby="exampleModalLabel"  aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- modal title -->
+                            <h1 class="modal-title fs-5"  id="exampleModalLabel">Edit Admin</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Account zone -->
+                            <h2>Account</h2>
+                            <!-- Account 表單區 -->
+                            <form>
+                                <div class="mb-3">
+                                  <label for="edit-name"  class="col-form-label">Name:</label>
+                                  <input type="text" class="form-control" id="edit-name" placeholder="Emir Wicks">
+                                </div>
+                                <div class="mb-3">
+                                  <label for="edit-email"  class="col-form-label">Email:</label>
+                                  <input type="email" class="form-control" id="edit-email" placeholder="emir.wicks@mail.com">
+                                </div>
+                            </form>
+                            <hr>
+                            <!-- Verification zone -->
+                            <h2>Verification</h2>
+                            <div class="verif d-flex justify-content-between align-center">
+                                <div class="verifIcon d-flex align-center">
+                                    <span class="material-symbols-outlined me-3">check_circle</span>
+                                    <p>Verified</p>
+                                </div>
+                                <p>2020/4/12</p>
+                            </div>
+                            <input type="text" class="form-control text-center border-secondary rounded-0 w-100 verif-btn text-secondary" value="Send Verification Mail"  aria-label="readonly input example" readonly>
+                            <hr>
+                            <!-- Access zone -->
+                            <h2>Access Level</h2>
+                            <!-- 選擇功能表區 -->
+                            <select class="form-select rounded-0 border-black" aria-label="Default select example">
+                                <option selected class="ms-3">Admin</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <hr>
+                            <!-- Custom Access zone -->
+                            <h2>Custom Access</h2>
+                            <!-- 核取方塊 -->
+                            <ul class="customCheck list-unstyled">
+                                <li class="chickItem"  style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="LectureCheck">
+                                    <label class="form-check-label" for="LectureCheck">
+                                        Lecture
+                                    </label>
+                                </li>
+                                <li class="chickItem"  style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="CouponCheck">
+                                    <label class="form-check-label" for="CouponCheck">
+                                        Coupon
+                                    </label>
+                                </li>
+                                <li class="chickItem"  style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="MessageCheck">
+                                    <label class="form-check-label"  for="MessageCheck">
+                                        Message
+                                    </label>
+                                </li>
+                                <li class="chickItem"  style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="SettingCheck">
+                                    <label class="form-check-label" for="SettingCheck">
+                                        Setting
+                                    </label>
+                                </li>
+                                <li class="chickItem"  style="margin: 16px 0;">
+                                    <input class="form-check-input border-black rounded-0"  type="checkbox"  value=""  id="TaskCheck">
+                                    <label class="form-check-label"  for="TaskCheck">
+                                        Task Menu
+                                    </label>
+                                </li>
+                            </ul>
+                            <hr>
+                            <!-- Deactivate Account zone -->
+                            <h2>Deactivate Account</h2>
+                            <!-- 緊急危險區塊 -->
+                            <div class="danger d-flex mb-1">
+                                <span class="material-symbols-outlined me-2 text-danger">warning</span>
+                                <p class="text-danger">This cannot be undone!</p>
+                            </div>
+                            <button type="button" class="btn btn-outline-danger rounded-0 w-100">Deactivate This Account</button>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- modal buttons -->
+                            <button type="button" class="btn btn-outline-success rounded-0 me-3" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-success rounded-0">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- watching 的 modal區塊 -->
+            <div class="modal fade watchModal rounded-0" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content rounded-0">
+                        <div class="modal-body d-flex">
+                            <div class="modalImg" id="staticBackdropLabel">
+                                <img style="width:100%; height: 141px;" src="https://images.unsplash.com/photo-1522069394066-326005dc26b2?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=1350&q=80" alt="躺在草地上的女生">
+                            </div>
+                            <div class="modalContent flex-column w-100 ms-3">
+                                <div class="modalNum d-flex justify-content-between w-100">
+                                    <p>#1</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="content">
+                                    <p class="mb-1">Admin</p>
+                                    <h3 class="fs-4 fw-bold">Emir Wicks</h3>
+                                    <span class="addC fs-6">emir.wicks@mail.com</span>
+                                </div>
+
+                                <div class="accordion accordion-flush w-100"  id="accordionFlushExample">
+                                    <div class="accordion-item bg-light">
+                                        <h2 class="accordion-header"  id="flush-headingOne">
+                                          <button class="accordion-button collapsed p-0 mt-3 bg-light border-light" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Verified
+                                          </button>
+                                        </h2>
+                                        <div id="flush-collapseOne"  class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                          <div class="accordion-body d-flex justify-content-end">
+                                            <!-- modal buttons -->
+                                            <button type="button" class="btn btn-outline-danger rounded-0 me-3" data-bs-dismiss="modal" style="width: 146px;">Cancel</button>
+                                            <button type="button" class="btn btn-success rounded-0" style="width: 92px;" data-bs-target="#exampleModal" data-bs-toggle="modal">Edit</button>
+                                        </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </main>
+    </div>
+    
+</body>
+</html>
