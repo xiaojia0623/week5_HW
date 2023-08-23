@@ -1,0 +1,159 @@
+
+//右邊主要內容區塊
+.main{
+    padding: 32px;
+    .admin-title{
+        .adminTitle{
+            h1{
+                font-size: $font-s-24;
+                line-height: 33px;
+                font-weight: bold;
+                margin-right: 46px;
+            }
+            h2{
+                align-items: center;
+                font-size: $font-s-16;
+                display: flex;
+                a{
+                    display: flex;
+                    font-weight: bold;
+                    color:#000;
+                    span{
+                        width: 24px;
+                        margin-right: 8px;
+                    }
+                    &:hover{
+                        color:$dark-green;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+ //table區塊
+.table{
+    margin-top: 16px;
+    thead{
+        tr{
+            font-size: 16px;
+            th{
+                align-self: center;
+                span{
+                    color:$dark-green;
+                    
+                }
+            }
+            
+            
+        }
+    }
+    tbody{
+        tr{
+            border-bottom: 1px solid #CED4DA;
+        }
+        .editBtn{
+            align-self: center;
+            a{
+                .material-symbols-outlined{
+                    width: 24px;height: 24px;
+                    color:#000;
+                    &:hover{
+                        color:$dark-green;
+                    }
+                }
+            }
+        }
+    }
+}
+//頁碼區
+.pagination{
+    margin-top: 63px;
+    border-radius: 5px;
+    .page-item{
+        border: 1px solid #198754;
+        a{
+            
+            color:#000;
+            span{
+                font-size: 16px;
+                font-weight: bold;
+            }
+            &.active{
+                color:#ffffff;
+                border:1px solid #198754;
+                background-color: #198754;
+            }
+        }
+    }
+}
+
+//edit的modal區塊
+.modal{
+    .modal-body{
+        h2{
+            font-size: $font-s-20;
+            line-height: 33px;
+            font-weight: bold;
+        }
+        .verif{
+            margin-bottom: 18px;
+            .verifIcon{
+                span{
+                    font-size: $font-s-20;
+                    color: #198754;
+                    display: block;
+                    align-self: center;
+                }
+                p{
+                    font-size: $font-s-16;
+                }
+            }
+            p{
+                font-size: $font-s-14;
+                color:#212529;
+            }
+            .verif-btn{
+                margin-top: 18px;
+            }
+        }
+        .customCheck{
+            .checkItem{
+                margin-bottom: 16px 0;
+            }
+        }
+    }
+}
+
+//查看的 modal區塊
+.watchModal{
+    margin: 0; padding: 0;
+    .modal-body{
+        .modalImg{
+            max-width: 141px;
+            img{
+                width: 100%;
+                height: 141px;
+            }
+        }
+        .modalContent{
+            width: 100%;
+            .content{
+                p{
+                    font-size: $font-s-16;
+                    line-height: 24px;
+                }
+                h3{
+                    font-size: $font-s-24;
+                    line-height: 36px;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+                span{
+                    color:#6C757D;
+                }
+            }
+        }
+    }
+}
+

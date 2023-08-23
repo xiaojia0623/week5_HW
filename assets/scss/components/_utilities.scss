@@ -1,0 +1,39 @@
+//special-raidus
+.list-r{
+    border-radius: 0 0 2px 2px;
+}
+.list-bradius{
+    border-radius:2px 2px  0 0 ;
+}
+
+.bgc{  //page頁碼顏色設定
+    background-color: #198754;
+    &:hover{
+        color:#000;
+    }
+}
+.tc{ //page頁碼顏色設定
+    color:#fff;
+    &:hover{
+        color:#000;
+    }
+}
+
+.add{
+    color:$dark-green;
+}
+
+.m-img{
+    width: 40px; height: 40px;
+    border-radius: 50%;
+}
+
+.mb-16{
+    margin-bottom: 16px 0;
+}
+.p-32{
+    padding: 32px;
+}
+.addC{
+    color:#6C757D;
+}

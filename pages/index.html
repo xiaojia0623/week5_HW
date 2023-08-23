@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./layout/head'); -%>
+    <title>Assignment頁面</title>
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- 左邊區塊 -->
+      <nav class="sidebar  pt-3 vh-100 border-end d-flex flex-column">
+          <!-- 1. 後台logo-->
+          <a href="#" class="logoIcon">
+              <img src="/assets/images/logo-ANSWER.svg" alt="logo">
+          </a>
+          <!-- 2. 後台選單內容-->
+          <div class="overflow-auto mt-3">
+              <div class="px-2">
+                  <a href="#" class="sidebar-link">
+                      <div class="px-4 align-center d-flex">
+                          <span class="material-symbols-outlined me-3">insert_chart</span>
+                          <p class="mb-0">Dashboard</p>
+                      </div>
+                  </a>
+                  <a href="#" class="sidebar-link">
+                      <div class="px-4 align-center d-flex">
+                          <span class="material-symbols-outlined me-3">forum</span>
+                          <p>Question</p>
+                      </div>
+                  </a>
+                  <a href="index.html" class="sidebar-link active">
+                      <div class="px-4 align-center d-flex">
+                          <span class="material-symbols-outlined me-3">assignment</span>
+                          <p>Assignment</p>
+                      </div>
+                  </a>
+                  <a href="#" class="sidebar-link">
+                      <div class="px-4 align-center d-flex">
+                          <span class="material-symbols-outlined me-3">video_library</span>
+                          <p>Course</p>
+                      </div>
+                  </a>
+                  <a href="adminPage.html" class="sidebar-link">
+                      <div class="px-4 align-center d-flex">
+                          <span class="material-symbols-outlined me-3">group</span>
+                          <p>Admin</p>
+                      </div>
+                  </a>
+                  <a href="#" class="sidebar-link">
+                      <div class="px-4 align-center d-flex">
+                          <span class="material-symbols-outlined me-3">settings</span>
+                          <p>Settings</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+          <!-- 3. 帳號管理-->
+          <div class="userInfo d-flex sidebar-link">
+              <img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80" alt="user-pic">
+              <div class="userName">
+                  <p>Andy Chen</p>
+                  <a href="mailto:andy0401@mail.com">andy0401@mail.com</a>
+              </div>
+          </div>
+      </nav>
+      <!-- 右邊區塊 -->
+      <main class="main">
+          <!-- 上排區塊 -->
+          <div class="bg-white w-100">
+              <div class="main-title d-flex justify-content-between align-center">
+                  <div class="assign-title d-flex align-center">
+                      <h1>Assignment</h1>
+                      <div class="allDrop">
+                        <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                          <p>All Courses</p>
+                          <span class="material-symbols-outlined">expand_more</span>
+                        </a>
+                      
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="topIcon align-center">
+                      <span class="material-symbols-outlined me-3">search</span>
+                      <span class="material-symbols-outlined">notifications_active</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- main內容區塊 -->
+          <section class="mainContent d-flex justify-content-between align-center">
+              <!-- main內容左邊區塊 -->
+              <div class="titleList">
+                <div class="allDrop">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      <p>All (4)</p>
+                      <span class="material-symbols-outlined">expand_more</span>
+                    </a>
+                  
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                  <ul class="list-group">
+                    <li class="list-group-item active list-bradius" aria-current="true">
+                      <a href="#" class="d-block">
+                        <div class="listContent d-flex justify-content-between align-center">
+                           <p>Chapter Assignment 2</p>
+                           <span>4 hrs ago</span>
+                        </div>
+                        <div class="contentTitle d-flex justify-content-between align-center">
+                           <h2>Please check this file…</h2>
+                           <span>Emily Wang</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#" class="d-block">
+                         <div class="listContent d-flex justify-content-between align-center">
+                            <p>Chapter Assignment 1</p>
+                            <span>12 hrs ago</span>
+                         </div>
+                         <div class="contentTitle d-flex justify-content-between align-center">
+                            <h2>My Homework</h2>
+                            <span>David Xu</span>
+                          </div>
+                       </a>
+                    </li>
+                    <li class="list-group-item">
+                      <a href="#" class="d-block">
+                         <div class="listContent d-flex justify-content-between align-center">
+                            <p>Final Assignment</p>
+                            <span>18 hrs ago</span>
+                         </div>
+                         <div class="contentTitle d-flex justify-content-between align-center">
+                            <h2>Have a problem with this…</h2>
+                            <span>Tony Wei</span>
+                          </div>
+                       </a>
+                    </li>
+                    <li class="list-group-item list-r">
+                      <a href="#" class="d-block">
+                         <div class="listContent d-flex justify-content-between align-center">
+                            <p>Final Assignment</p>
+                            <span>19 hrs ago</span>
+                         </div>
+                         <div class="contentTitle d-flex justify-content-between align-center">
+                            <h2>Did I do it right?</h2>
+                            <span>Christina Lin</span>
+                          </div>
+                       </a>
+                    </li>
+                  </ul>
+              </div>
+              <!-- main內容右邊區塊 -->
+              <div class="mainContentS">
+                  <p class="commitNum text-end">2 comments</p>
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="firstContent d-flex justify-content-between align-center">
+                         <div class="firstContentTitle">
+                             <p>Chapter Assignment 2 / HTML&CSS</p>
+                             <span>Please check this file for me, thanks!</span>
+                         </div>
+                         <a href="#" class="align-self-center"><span class="material-symbols-outlined">more_vert</span></a>
+                       </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <div class="memberInfo d-flex">
+                           <div class="memberImg d-block">
+                              <img src="https://images.unsplash.com/photo-1504051771394-dd2e66b2e08f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2134&q=80" alt="user-pic">
+                           </div>
+                           <div class="memberName">
+                              <p>Emily Wang</p>
+                              <span><time>10:38</time> AM (4 hours ago)</span>
+                            </div>
+                         </div>
+                        <!-- 右邊學生留言內容 - 第一則 -->
+                        <div class="memContent">
+                           <p>Hi Teacher, the attached file is my homework of chapter 2. And here comes a
+                            question: Why in the following code the height of the <span class="greenWord">div</span> is bigger than the
+                                                    height of the <span class="greenWord">img</span> ? There is a gap below the image, but it doesn’t seems to be
+                                                    a padding/margin. What is the gap or extra space below image?</p>
+                            <button  type="button" class="btn btn-light d-flex align-center">
+                                <span class="material-symbols-outlined me-2">attach_file</span>
+                                <p class="align-center mb-0">HW-2-David.zip</p>
+                            </button>
+                            <hr>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <!-- 右邊學生留言內容 - 第二則 -->
+                        <div class="memberContent">
+                            <div class="memberInfo d-flex">
+                                <div class="d-flex">
+                                    <div class="memberImg d-block">
+                                        <img src="https://images.unsplash.com/photo-1514794749374-fb67509dbb7f?ixlib=rb-1.2.1&ixid=eyjhchbfawqiojeymdd9&auto=format&fit=crop&w=2000&q=80" alt="user-pic">
+                                    </div>
+                                     <div class="memberName">
+                                        <p>Andy Chen (You)</p>
+                                        <span><time>13:24</time> AM (1 hours ago)</span>
+                                    </div>
+                                </div>
+                                <div class="topIcon align-center ms-auto">
+                                    <a href="#"><span class="material-symbols-outlined me-3">Star</span></a>
+                                    <a href="#"><span class="material-symbols-outlined">edit</span></a>
+                                </div>
+                            </div>
+                            <div class="memContent">
+                                <p>Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the 
+                                    descenders you find on letters like g, j, p and q.
+                                </p>
+                                <p>You can: </p>
+                                <ul>
+                                    <li class="contentList">
+                                        <p>djust the<span class="greenWord"> vertical-align </span>of the image to position it elsewhere(e.g.
+                                        <span class="greenWord">the middle</span> ) or</p> 
+                                    </li>
+                                    <li class="contentList">
+                                        <p>change the <span class="greenWord">display</span> so it isn’t inline.</p>
+                                    </li>
+                                </ul>
+                             </div>                 
+                         </div>
+                      </li>
+                    </ul>
+                  </div>
+
+
+
+
+
+                  <!-- main下方左右頁以及按鈕區塊 -->
+                  <div class="bottomSection d-flex">
+                      <div class="page d-flex me-auto">
+                          <div class="d-flex align-center">
+                              <a href="#"><span class="material-symbols-outlined me-3">navigate_before</span></a>
+                              <a href="#"><span class="material-symbols-outlined">navigate_next</span></a>
+                          </div>
+                      </div>
+                      <div class="greenBtn d-flex justify-content-end ms-auto">
+                          <a href="#" class="btn btn-outline-success rounded-0 me-3">Mark as red</a>
+                          <a href="#" class="btn btn-success  rounded-0">Reply</a>
+                      </div>
+                  </div>
+              </div>
+          </section>
+      </main>
+    </div>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
